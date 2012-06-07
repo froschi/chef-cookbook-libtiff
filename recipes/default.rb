@@ -1,3 +1,5 @@
+include_recipe "libjpeg"
+
 packages = %w/
   libtiff4
 /
