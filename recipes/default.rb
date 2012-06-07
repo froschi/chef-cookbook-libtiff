@@ -1,8 +1,17 @@
 include_recipe "libjpeg"
 
-packages = %w/
-  libtiff4
-/
+packages = Array.new
+
+case node[:lsb][:codename]
+when "lucid"
+  packages |= %w/
+    libtiff4
+  /
+when "precise"
+  packages |= %w/
+    libtiff4
+  /
+end
 
 packages.each do |pkg|
   package pkg do
