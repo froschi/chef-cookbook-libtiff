@@ -7,10 +7,6 @@ when "lucid"
   packages |= %w/
     libtiff4
   /
-when "precise"
-  packages |= %w/
-    libtiff4
-  /
 end
 
 packages.each do |pkg|
